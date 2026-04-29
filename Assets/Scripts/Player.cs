@@ -14,11 +14,11 @@ public enum PlayerController
 public class Player : BaseEntity
 {
     public InputSystem_Actions inputs;//-> 1.
-    public InputActionMap actionMap;
+   // public InputActionMap actionMap;
     public PlayerController playerController;
 
 
-    public Animator animator;
+    //public Animator animator;
 
     public Vector2 MoveInput;
     public float MoveSpeed;
@@ -94,14 +94,15 @@ public class Player : BaseEntity
     }
     public void OnMove()
     {
+        Debug.Log("wazaaaaa");
         if (MoveInput != Vector2.zero)
         {
-            animator.SetBool("IsMoving", true);
+           // animator.SetBool("IsMoving", true);
 
             transform.position += (Vector3)MoveInput * MoveSpeed * Time.deltaTime;
         }
-        else
-            animator.SetBool("IsMoving", false);
+        //else
+           // animator.SetBool("IsMoving", false);
     }
     /* public void AutoAttackEnemies()
      {
